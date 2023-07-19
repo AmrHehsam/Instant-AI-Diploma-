@@ -67,13 +67,15 @@
 # print(string)
 
 
-# #6-Write a Python program to remove characters that have odd index values in a given string (Sample String:abca Expected Result:ac)
+# #6-Write a Python program to remove characters that have odd index values in a given string
+# #(Sample String:abca Expected Result:ac)
 #
 # string = input("String: ")
 # print(string[0::2])
 
 
-# #7-Write a Python program to count the occurrences of each word in a given sentence (Sample String:amr and ahmed are frindes but amr is the tallest Expected Result:2)
+# #7-Write a Python program to count the occurrences of each word in a given sentence
+# #(Sample String:amr and ahmed are frindes but amr is the tallest Expected Result:2)
 #
 # string = input("String: ")
 # stringSet = set(string.split())
@@ -488,3 +490,63 @@
 # print(uniqueComb)
 
 
+# #36-Remove all the occurrences of an element from a list in Python (Input : 1 1 2 3 4 5 1 2 1 Output : 2 3 4 5 2)
+#
+# size = int(input("Size: "))
+# lst = []
+# for i in range(0,size):
+#     lst.append(input(f"Element index {i}: "))
+# element = input("Element to be removed: ")
+# for i in range(0,lst.count(element)):
+#     lst.remove(element)
+# print(lst)
+
+
+# #37-write a python program to Replace index elements with elements in Other List
+# # (The original list 1 is : [‘Gfg’, ‘is’, ‘best’] The original list 2 is : [0, 1, 2, 1, 0, 0, 0, 2, 1, 1, 2, 0]
+# # The lists after index elements replacements is : [‘Gfg’, ‘is’, ‘best’, ‘is’, ‘Gfg’, ‘Gfg’, ‘Gfg’, ‘best’, ‘is’, ‘is’, ‘best’, ‘Gfg’])
+#
+# size1 = int(input("List1 size: "))
+# list1 = []
+# for i in range(0, size1):
+#     list1.append(input((f"Element index {i}: ")))
+# size2 = int(input("List2 size: "))
+# list2 = []
+# for i in range(0, size2):
+#     list2.append(input((f"Element index {i}: ")))
+# for i in range(0, size2):
+#     list2[i] = list1[int(list2[i])]
+# print(list2)
+
+
+# # 38-write python program to Retain records with N occurrences of K (Input : test_list = [(4, 5, 5, 4), (5, 4, 3)],
+# # K = 5, N = 2 Output : [(4, 5, 5, 4)] Input : test_list = [(4, 5, 5, 4), (5, 4, 3)], K = 5, N = 3 Output : [] )
+#
+# lst = [(4,5,5,4),(5,4,3)]
+# lst2 = []
+# k = 5
+# n = 2
+# for tup in lst:
+#     if tup.count(k) == n:
+#         lst2.append(tup)
+# print(lst2)
+
+
+# # 39-write a Python Program to Sort the list according to the column using lambda array = [[1, 3, 3], [2, 1, 2], [3, 2, 1]]
+# # Output :Sorted array specific to column 0, [[1, 3, 3], [2, 1, 2], [3, 2, 1]]
+# # Sorted array specific to column 1, [[2, 1, 2], [3, 2, 1], [1, 3, 3]] Sorted array specific to column 2, [[3, 2, 1], [2, 1, 2], [1, 3, 3]]
+#
+# lst = [[1, 3, 3], [2, 1, 2], [3, 2, 1]]
+# for i in range(len(lst[0])):
+#     sortedCol = sorted(lst, key=lambda x: x[i])
+#     print(f"Sorted by Column{i}", sortedCol)
+
+
+# #40- write a program to Sort Python Dictionaries by Key or Value Input: {'ravi': 10, 'rajnish': 9, 'sanjeev': 15, 'yash': 2, 'suraj': 32}
+# #Output: {'rajnish': 9, 'ravi': 10, 'sanjeev': 15, 'suraj': 32, 'yash': 2}
+#
+# dic = {'ravi': 10, 'rajnish': 9, 'sanjeev': 15, 'yash': 2, 'suraj': 32}
+# lst = list(dic.keys())
+# lst.sort()
+# sortedDict = {i: dic[i] for i in lst}
+# print(sortedDict)
