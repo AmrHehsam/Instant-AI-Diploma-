@@ -402,3 +402,89 @@
 #     else:
 #         count -= 1
 # print(count)
+
+
+# #31-write a python program Extract all elements with Frequency greater than K (Input : test_list = [4, 6, 4, 3, 3, 4, 3, 4, 3, 8], K = 3 Output : [4, 3])
+#
+# size = int(input("Size: "))
+# lst = []
+# for i in range(0,size):
+#     lst.append(input(f"Element index {i}: "))
+# k = int(input("K: "))
+# freqLst = []
+# for item in lst:
+#     if lst.count(item) > k:
+#         if item not in freqLst:
+#             freqLst.append(item)
+# print(freqLst)
+
+
+# #32-write a python program to find the Strongest Neighbour (Input: 1 2 2 3 4 5 Output: 2 2 3 4 5)
+#
+# size = int(input("Size: "))
+# lst = []
+# for i in range(0,size):
+#     lst.append(input(f"Element index {i}: "))
+# lst2 = []
+# for i in range(1,size):
+#     mx = max(lst[i], lst[i-1])
+#     lst2.append(mx)
+# print(lst2)
+
+
+# #33-write a Python Program to print all Possible Combinations from the three Digits
+# # (Input: [1, 2, 3] Output:1 2 3 ## 1 3 2 ## 2 1 3 ## 2 3 1 ## 3 1 2 ## 3 2 1)
+#
+# lst = []
+# for i in range(0,3):
+#     lst.append(input(f"Element index {i}: "))
+# for i in range(0,3):
+#     for j in range(0, 3):
+#         for k in range(0, 3):
+#             if i != j and i != k and j != k:
+#                 print(lst[i], lst[j], lst[k])
+
+
+# #34-write a Python program to find all the Combinations in the list with the given condition
+# # (Input: test_list = [1,2,3] Output:  [1], [1, 2], [1, 2, 3], [1, 3] [2], [2, 3], [3])
+#
+# lst = []
+# for i in range(0, 3):
+#     lst.append(input(f"Element index {i}: "))
+# kBool = False
+# for i in range(0, 3):
+#     print(lst[i])
+#     if(i < 2):
+#         print(lst[i], lst[i+1])
+#     if(i < 1):
+#         print(lst[i], lst[i+1], lst[i+2])
+
+
+# #35-write a Python program to get all unique combinations of two Lists
+# # (List_1 = ["a","b"] List_2 = [1,2] Unique_combination = [[('a',1),('b',2)],[('a',2),('b',1)]] )
+#
+# list1 = []
+# for i in range(0, 2):
+#     list1.append(input(f"Element index {i} of list1: "))
+# list2 = []
+# for i in range(0, 2):
+#     list2.append(input(f"Element index {i} of list2: "))
+# uniqueComb = []
+# lst = []
+# for i in range(0, 2):
+#     tup = (list1[i], list2[i])
+#     lst.append(tup)
+#     if i == 1:
+#         uniqueComb.append(lst)
+# lst = []
+# for i in range(0, 2):
+#     if i == 0:
+#         tup = (list1[i], list2[1])
+#     else:
+#         tup = (list1[i], list2[0])
+#     lst.append(tup)
+#     if i == 1:
+#         uniqueComb.append(lst)
+# print(uniqueComb)
+
+
