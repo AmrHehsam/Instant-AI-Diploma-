@@ -550,3 +550,191 @@
 # lst.sort()
 # sortedDict = {i: dic[i] for i in lst}
 # print(sortedDict)
+
+
+# #41-write python program to Remove keys with Values Greater than K ( Including mixed values ) input :
+# # test_dict = {‘Gfg’ : 3, ‘is’ : 7, ‘best’ : 10, ‘for’ : 6, ‘geeks’ : ‘CS’}, K = 7 Output : {‘Gfg’ : 3, ‘for’ : 6, ‘geeks’ : ‘CS’}
+#
+# dictionary = {"Gfg": 3, "is": 7, "best": 10, "for": 6, "geeks": "CS"}
+# for key in list(dictionary):
+#     try:
+#         if int(dictionary[key]) >= 7:
+#             del dictionary[key]
+#     except:
+#         print("", end='')
+# print(dictionary)
+
+
+# #42-Write a Python program to concatenate the following dictionaries to create a new one Sample Dictionary : dic1={1:10, 2:20}
+# #dic2={3:30, 4:40} dic3={5:50,6:60} Expected Result : {1: 10, 2: 20, 3: 30, 4: 40, 5: 50, 6: 60}
+#
+# dic1 = {1: 10, 2: 20}
+# dic2 = {3: 30, 4: 40}
+# dic3 = {5: 50, 6: 60}
+# dic4 = {}
+# for dic in (dic1, dic2, dic3):
+#     dic4.update(dic)
+# print(dic4)
+
+
+# #43-Write a Python program to iterate over dictionaries using for loops
+#
+# dic1 = {1: 10, 2: 20}
+# dic2 = {3: 30, 4: 40}
+# dic3 = {5: 50, 6: 60}
+# for dic in (dic1, dic2, dic3):
+#     print(dic)
+
+
+# #44- Write a Python script to merge two Python dictionaries
+#
+# dic1 = {1: 10, 2: 20}
+# dic2 = {3: 30, 4: 40}
+# dic1.update(dic2)
+# print(dic1)
+
+
+# #45-Write a Python program to get the maximum and minimum values of a dictionary values
+#
+# dic1 = {'a': 15, 'b': 20, 'c': 30, 'd': 25, 'e': 12}
+# print("max value = ",max(dic1.values()))
+# print("min value = ",min(dic1.values()))
+
+
+# #46-Write a Python program to drop empty items from a given dictionary. Original Dictionary: {'c1': 'Red', 'c2': 'Green', 'c3': None}
+# # New Dictionary after dropping empty items: {'c1': 'Red', 'c2': 'Green'}
+#
+# dic1 = {'c1': 'Red', 'c2': 'Green', 'c3': None}
+# dic1 = {key:value for (key, value) in dic1.items() if value is not None}
+# print(dic1)
+
+
+# #47-Write a Python program to create a tuple of numbers and print one item
+#
+# items = 1,2,3,4,5,6
+# print(items)
+# item = 3,
+# print(item)
+
+
+# #48-Write a Python program to unpack a tuple into several variables
+#
+# tuples = (1,2,3,4,5)
+# n1,n2,n3,n4,n5 = tuples
+# print(n1,n2,n3,n4,n5)
+
+
+# #49-Write a Python program to add an item to a tuple
+#
+# tup = (1,2,3,4)
+# tup = list(tup)
+# tup.append(5)
+# tup = tuple(tup)
+# print(tup)
+
+
+# #50-Write a Python program to convert a tuple to a string
+#
+# tup = ('H', 'e', 'l', 'l', 'o', ' ', 'W', 'o', 'r', 'l', 'd', '!')
+# str = ''
+# for i in tup:
+#     str += i
+# print(str)
+
+
+# #51-Write a Python program to convert a list to a tuple
+#
+# lst = [1, 2, 3, 4, 5]
+# lst = tuple(lst)
+# print(lst)
+
+
+# #52-Write a Python program to reverse a tuple
+# tup = (1, 2, 3, 4, 5)
+# tup2 = reversed(tup)
+# print(tuple(tup2))
+
+
+# #53-Write a Python program to replace the last value of tuples in a list. Sample list: [(10, 20, 40), (40, 50, 60), (70, 80, 90)]
+# #Expected Output: [(10, 20, 100), (40, 50, 100), (70, 80, 100)]
+#
+# lst = [(10, 20, 40), (40, 50, 60), (70, 80, 90)]
+# val = 100
+# print([tup[:-1] + (val,) for tup in lst])
+
+
+# #54-Write a Python program to convert a given string list to a tuple Original string: python 3.0 <class 'str'>
+# #Convert the said string to a tuple: ('p', 'y', 't', 'h', 'o', 'n', '3', '.', '0')
+#
+# string = "python 3.0"
+# lst = []
+# for s in string:
+#     if s == ' ':
+#         pass
+#     else:
+#         lst.append(s)
+# print(tuple(lst))
+
+
+# #55-Write a Python program to calculate the average value of the numbers in a given tuple of tuples
+#
+# tup = ((1, 2, 3), (4, 5, 6), (7, 8, 9))
+# sum = 0
+# counter = 0
+# for t in tup:
+#     for i in t:
+#         sum += i
+#         counter += 1
+# avg = sum/counter
+# print(avg)
+
+
+# #56-Write a Python program to add member(s) to a set.
+#
+# mySet = {1, 2, 3, 4, 5}
+# mySet.add(6)
+# mySet.add(7)
+# print(mySet)
+
+
+# #57-Write a Python program to remove an item from a set if it is present in the set.
+#
+# mySet = {1, 2, 3, 4, 5, 6}
+# mySet.discard(7)
+# print(mySet)
+# mySet.discard(4)
+# print(mySet)
+
+
+# #58-Write a Python program to create an intersection,union,difference and symmetric difference of sets
+#
+# set1 = {1, 2, 3, 4, 5, 6, 7, 8, 9}
+# set2 = {0, 2, 3, 4, 6, 7, 9, 10}
+#
+# print("Union :", set1 | set2)
+# print("Intersection :", set1 & set2)
+# print("Difference :", set1 - set2)
+# print("Symmetric difference :", set1 ^ set2)
+
+
+# # 59-Write a Python program to find the maximum and minimum values in a set
+#
+# set1 = {4, 2, 8, 19, 21, 5, 4, 1, 10}
+# print("Max: ", max(set1))
+# print("Min: ", min(set1))
+
+
+# #60- Write a Python program that finds all pairs of elements in a list whose sum is equal to a given value
+#
+# lst = [4, 0, 2, 8, 19, 21, 5, 5, 4, 1, 10]
+# val = 10
+# countI = 0
+# for i in lst:
+#     countI += 1
+#     countJ = 0
+#     for j in lst:
+#         countJ += 1
+#         if countI != countJ:
+#             if i + j == val:
+#                 print(i, '+', j, '=', val)
+#                 lst.remove(i)
